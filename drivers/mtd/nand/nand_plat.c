@@ -55,7 +55,6 @@ int board_nand_init(struct nand_chip *nand)
 #ifdef NAND_PLAT_INIT
 	NAND_PLAT_INIT();
 #endif
-
 	nand->cmd_ctrl = plat_cmd_ctrl;
 	nand->dev_ready = plat_dev_ready;
 	nand->ecc.mode = NAND_ECC_SOFT;

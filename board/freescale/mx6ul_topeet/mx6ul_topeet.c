@@ -885,8 +885,9 @@ int checkboard(void)
 	if (is_mx6ul_9x9_evk())
 		puts("Board: MX6UL 9x9 EVK\n");
 	else
-		puts("Board: MX6UL 14x14 EVK\n");
-
+		puts("Board: MX6UL TOPEET\n");
+		/* puts("Board: MX6UL 14x14 EVK\n"); */
+	puts("ZJXIANG 2018-12-27 \n");
 	return 0;
 }
 

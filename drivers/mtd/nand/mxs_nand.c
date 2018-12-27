@@ -1325,7 +1325,7 @@ int board_nand_init(struct nand_chip *nand)
 	err = mxs_nand_init(nand_info);
 	if (err)
 		goto err2;
-
+	
 	memset(&fake_ecc_layout, 0, sizeof(fake_ecc_layout));
 
 	nand->priv = nand_info;
@@ -1354,6 +1354,7 @@ int board_nand_init(struct nand_chip *nand)
 	nand->ecc.size		= 512;
 	nand->ecc.strength	= 8;
 
+	/*zjxiang go here */
 	return 0;
 
 err2:
