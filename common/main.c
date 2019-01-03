@@ -69,6 +69,10 @@ void main_loop(void)
 	if (cli_process_fdt(&s))
 		cli_secure_boot_cmd(s);
 
+	/*zjxiang printf("autoboot_command:\n%s\n",s);*/
+/* s = bootcmd = 
+nand read ${loadaddr} 0x4000000 0x800000;nand read ${fdt_addr} 0x5000000 0x100000;bootz ${loadaddr} - ${fdt_addr}
+*/
 	autoboot_command(s);
 
 	cli_loop();

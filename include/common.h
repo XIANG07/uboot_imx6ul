@@ -95,7 +95,7 @@ typedef volatile unsigned char	vu_char;
 #endif
 
 /* open debug -- zjxiang*/
-/* #define DEBUG */
+#define DEBUG
 
 #ifdef DEBUG
 #define _DEBUG	1

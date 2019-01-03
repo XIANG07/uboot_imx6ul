@@ -503,6 +503,8 @@ static int initr_env(void)
 
 	/* Initialize from environment */
 	load_addr = getenv_ulong("loadaddr", 16, load_addr);
+	puts("show load_addr:\n");
+	printf("load_addr = 0x%08x\n", load_addr);
 #if defined(CONFIG_SYS_EXTBDINFO)
 #if defined(CONFIG_405GP) || defined(CONFIG_405EP)
 #if defined(CONFIG_I2CFAST)

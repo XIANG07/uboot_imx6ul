@@ -982,15 +982,15 @@ static init_fnc_t init_sequence_f[] = {
 #ifdef CONFIG_DM_VIDEO
 	reserve_video,
 #else
-# ifdef CONFIG_LCD
+#ifdef CONFIG_LCD
 	reserve_lcd,
-# endif
+#endif
 	/* TODO: Why the dependency on CONFIG_8xx? */
-# if defined(CONFIG_VIDEO) && (!defined(CONFIG_PPC) || defined(CONFIG_8xx)) && \
+#if defined(CONFIG_VIDEO) && (!defined(CONFIG_PPC) || defined(CONFIG_8xx)) && \
 		!defined(CONFIG_ARM) && !defined(CONFIG_X86) && \
 		!defined(CONFIG_BLACKFIN) && !defined(CONFIG_M68K)
 	reserve_legacy_video,
-# endif
+#endif
 #endif /* CONFIG_DM_VIDEO */
 	reserve_trace,
 #if !defined(CONFIG_BLACKFIN)
